@@ -15,11 +15,45 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
 
+  <!-- Styling -->
+   <style>
+    * {
+      font-family: "Geist", sans-serif;
+    }
+   </style>
+
 </head>
 
-<body>
+<body class="bg-base-200">
 
-  
+  <header class="bg-base-100 shadow-sm">
+    <div class="head-conatiner container mx-auto">
+      <h1 class="text-4xl font-bold text-primary py-7">Job Application Tracker</h1>
+      <div class="status-div-container flex justify-between pb-7">
+        <!-- Status Buttons -->
+          <div class="bg-base-100 rounded-md shadow-sm w-[230px] p-5 border border-gray-100 space-y-1">
+            <p class="uppercase text-gray-500">Total</p>
+            <p id="total" class="font-bold text-2xl">0</p>
+          </div>
+
+          <div class="bg-base-100 rounded-md shadow-sm w-[230px] p-5 border border-gray-100 space-y-1">
+            <p class="uppercase text-gray-500">Applied</p>
+            <p id="applied" class="font-bold text-2xl text-primary">0</p>
+          </div>
+
+          <div class="bg-base-100 rounded-md shadow-sm w-[230px] p-5 border border-gray-100 space-y-1">
+            <p class="uppercase text-gray-500">Interview</p>
+            <p id="interview" class="font-bold text-2xl text-green-500">0</p>
+          </div>
+
+          <div class="bg-base-100 rounded-md shadow-sm w-[230px] p-5 border border-gray-100 space-y-1">
+            <p class="uppercase text-gray-500">Rejected</p>
+            <p id="rejected" class="font-bold text-2xl text-red-500">0</p>
+          </div>
+        
+      </div>
+    </div>
+  </header>
 
 
 
