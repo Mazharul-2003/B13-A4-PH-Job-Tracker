@@ -68,10 +68,10 @@
     </div>
 
     <div class="toggle-btn-container mb-8">
-      <div class="btn btn-primary py-4 px-8 rounded-md mr-2">All</div>
-      <div class="btn py-4 px-8 rounded-md mr-2">Applied</div>
-      <div class="btn py-4 px-8 rounded-md mr-2">Interview</div>
-      <div class="btn py-4 px-8 rounded-md">Rejected</div>
+      <div onclick="toogleBtn('all-btn')" id="all-btn" class="btn btn-primary py-4 px-8 rounded-md mr-2">All</div>
+      <div onclick="toogleBtn('applied-btn')" id="applied-btn" class="btn py-4 px-8 rounded-md mr-2 bg-gray-200">Applied</div>
+      <div onclick="toogleBtn('interview-btn')" id="interview-btn" class="btn py-4 px-8 rounded-md mr-2 bg-gray-200">Interview</div>
+      <div onclick="toogleBtn('rejected-btn')" id="rejected-btn" class="btn py-4 px-8 rounded-md bg-gray-200">Rejected</div>
     </div>
 
     <section>
@@ -97,13 +97,13 @@
             •
              $130,000 - $175,000</p>
 
-          <div class="uppercase py-1.5 w-35 border text-center rounded-sm">Not Applied</div>
+          <div id="status" class="uppercase py-1.5 w-35 border text-center rounded-sm">Not Applied</div>
 
           <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users
             worldwide.</p>
 
           <div class="inner-btn-card">
-            <button
+            <button id="card-applied"
               class="btn bg-base-100 border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white">Applied</button>
             <button
               class="btn bg-base-100 border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-white">Interview</button>
@@ -365,6 +365,7 @@
   </main>
 
 
+ <script src="./Script/index.js"></script>
 </body>
 
 </html>
