@@ -81,30 +81,16 @@ document.getElementById("job-container")
     const innerCardStat = document.querySelector(".card-stats");
 
     if (clickedElement.classList.contains('applied')) {
-      card.querySelector(".card-stats").innerText = "Applied";
-
-      if (card.parentNode.id !== "applied-container") {
-        const clone = card.cloneNode(true);
-        appliedContainer.appendChild(clone);
-      }
+      innerCardStat.innerText = "Applied";
+      appliedContainer.appendChild(card);
     }
-
     if (clickedElement.classList.contains('interview')) {
-      card.querySelector(".card-stats").innerText = "Interviewed";
-
-      if (card.parentNode.id !== "interview-container") {
-        const clone = card.cloneNode(true);
-        interviewContainer.appendChild(clone);
-      }
+      innerCardStat.innerText = "Interviewed";
+      interviewContainer.appendChild(card);
     }
-
     if (clickedElement.classList.contains('rejected')) {
-      card.querySelector(".card-stats").innerText = "Rejected";
-
-      if (card.parentNode.id !== "rejected-container") {
-        const clone = card.cloneNode(true);
-        rejectedContainer.appendChild(clone);
-      }
+      innerCardStat.innerText = "rejected";
+      rejectedContainer.appendChild(card);
     }
     if (clickedElement.classList.contains('delete-btn')) {
       cardParent.removeChild(card);
@@ -113,11 +99,6 @@ document.getElementById("job-container")
   });
 
 function updateStat() {
-  // totalStat.innerText = allContainer.children.length;
-  // appliedStat.innerText = appliedContainer.children.length;
-  // interviewStat.innerText = interviewContainer.children.length;
-  // rejectedStat.innerText = rejectedContainer.children.length;
-
   const counts = {
     "all-tab": allContainer.children.length,
     "applied-tab": appliedContainer.children.length,
